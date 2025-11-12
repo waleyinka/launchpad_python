@@ -1,6 +1,6 @@
 # Environments and caches
 .env
-.venv/
+venv/
 *.py[cod]
 *.pyo
 .pytest_cache/
