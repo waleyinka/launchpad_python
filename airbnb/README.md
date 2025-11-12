@@ -177,11 +177,11 @@ df_clean['host_name'].value_counts().head(1)
 
 ## 🪜 Reproducibility Checklist
 
-✅ Always work on a copy: df_clean = df_raw.copy()
-✅ Save cleaned data to data/ before clearing the kernel
-✅ Use relative paths (data/london_cleaned.csv)
-✅ Check your working directory using os.getcwd()
-✅ Keep your cleaning and analysis code in separate notebook sections
+ ✅ Always work on a copy: df_clean = df_raw.copy()
+ ✅ Save cleaned data to data/ before clearing the kernel
+ ✅ Use relative paths (data/london_cleaned.csv)
+ ✅ Check your working directory using os.getcwd()
+ ✅ Keep your cleaning and analysis code in separate notebook sections
 
 ---
 
