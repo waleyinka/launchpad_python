@@ -25,7 +25,7 @@ airbnb/
 │
 ├── data/
 │ ├── london_cleaned.csv
-│ ├── nyc_cleaned.csv
+│ └── nyc_cleaned.csv
 │
 ├── london.ipynb
 ├── new_york.ipynb

@@ -6,25 +6,25 @@ The project was designed for **MindFuel**, a mental wellness startup, and demons
 
 ---
 
-## 🧩 Table of Contents
+## Table of Contents
 
-1. [Overview](#overview)
-3. [Features](#features)
-4. [Tech Stack](#tech-stack)
-5. [Setup & Installation](#setup--installation)
-6. [Project Structure](#project-structure)
-7. [Configuration (.env)](#configuration-env)
-8. [Database Schema](#database-schema)
-9. [How It Works](#how-it-works)
-10. [Scheduling the Job](#scheduling-the-job)
-11. [Logging & Monitoring](#logging--monitoring)
-12. [Sample Output](#sample-output)
-13. [Future Improvements](#future-improvements)
-14. [Author & Learning Outcomes](#author--learning-outcomes)
+1. [Overview](#1-overview)
+2. [Features](#2-features)
+3. [Tech Stack](#3-tech-stack)
+4. [Setup & Installation](#4-setup--installation)
+5. [Project Structure](#5-project-structure)
+6. [Configuration (.env)](#6-configuration-env)
+7. [Database Schema](#7-database-schema)
+8. [How It Works](#8-how-it-works)
+9. [Scheduling the Job](#9-scheduling-the-job)
+10. [Logging & Monitoring](#10-logging--monitoring)
+11. [Sample Output](#11-sample-output)
+12. [Future Improvements](#12-future-enhancements)
+13. [Key Learnings](#13-key-learnings)
 
 ---
 
-## 🧭 Overview
+## 1. Overview
 
 **Goal:**  
 Build a system that automatically delivers inspirational quotes to subscribers based on their email frequency (daily or weekly), ensuring reliability, scalability, and clean observability via logs and monitoring.
@@ -40,7 +40,7 @@ This project simulates the backend service layer of a real mental wellness produ
 
 ---
 
-## ✨ Features
+## 2. Features
 
 ✅ Fetches motivational quotes from [ZenQuotes API](https://zenquotes.io)  
 ✅ Sends **personalized emails** based on subscription frequency  
@@ -52,7 +52,7 @@ This project simulates the backend service layer of a real mental wellness produ
 
 ---
 
-## ⚙️ Tech Stack
+## 3. Tech Stack
 
 | Category | Technology |
 |-----------|-------------|
@@ -66,9 +66,9 @@ This project simulates the backend service layer of a real mental wellness produ
 
 ---
 
-## 🛠️ Setup & Installation
+## 4. Setup & Installation
 
-### 1️⃣ Clone the Repository
+### Clone the Repository
 ```bash
 git clone https://github.com/<your-username>/zenquotes-emailer.git
 cd zenquotes-emailer
@@ -76,7 +76,7 @@ cd zenquotes-emailer
 
 ---
 
-## 📁 Project Structure
+## 5. Project Structure
 
 ``` bash
 zenquotes_emailer/
@@ -86,19 +86,18 @@ zenquotes_emailer/
 │   ├── db.py             
 │   ├── emailer.py         
 │   ├── quote_fetcher.py   
-│   ├── config.py         
+│   └── config.py         
 │
 ├── logs/
 │   └── app.log            
-│
-├── .env                   
+│                     
 ├── requirements.txt        
 └── README.md               
 ```
 
 ---
 
-## Configuration (.env)
+## 6. Configuration (.env)
 
 Create a .env file in the root directory:
 
@@ -115,7 +114,7 @@ MAIL_USER=your-mailtrap-username
 MAIL_PASSWORD=your-mailtrap-password
 ```
 
-## 🧮 Database Schema
+## 7. Database Schema
 
 users
 
@@ -141,19 +140,19 @@ email_sends
 
 ---
 
-## ⚙️ How It Works
+## 8. How It Works
 
-1. main.py runs the orchestrator.
+1. `main.py` runs as the orchestrator.
 
-2. It calls quote_fetcher.py to pull a fresh quote from ZenQuotes.
+2. It calls `quote_fetcher.py` to pull a fresh quote from ZenQuotes.
 
-3. The system retrieves active users from PostgreSQL using db.py.
+3. The system retrieves active users from PostgreSQL using `db.py`.
 
 4. For each user:
 
  - Builds a personalized message (first name only).
 
- - Sends via SMTP using emailer.py.
+ - Sends via SMTP using `emailer.py`.
 
  - Logs status (sent/failed) into the email_sends table.
 
@@ -161,7 +160,7 @@ email_sends
 
 ---
 
-## ⏰ Scheduling the Job
+## 9. Scheduling the Job
 
 **Option 1 — Linux Cron**
 
@@ -192,7 +191,7 @@ while True:
 
 --
 
-## 🪵 Logging & Monitoring
+## 10. Logging & Monitoring
 
 Every operation is logged both to the console and to logs/app.log.
 Logs are grouped by section (Daily/Weekly) for readability.
@@ -211,7 +210,7 @@ Example log:
 
 ---
 
-## 🧩 Sample Output
+## 11. Sample Output
 
 **📩 Email Preview (HTML)**
 
@@ -225,7 +224,7 @@ Example log:
 
 ---
 
-## 🚀 Future Enhancements
+## 12 Future Enhancements
 
 - Add REST API endpoints for user management (Flask/FastAPI)
 
@@ -241,14 +240,7 @@ Example log:
 
 ---
 
-## 👨🏽‍💻 Author & Learning Outcomes
-
-**Author:** Ganiu Odeyinka
-LinkedIn
-
----
-
-## Key Learnings
+## 13. Key Learnings
 
 - Designing modular, maintainable Python systems
 
