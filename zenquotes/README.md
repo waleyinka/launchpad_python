@@ -2,7 +2,7 @@
 
 A **production-ready system** that fetches motivational quotes from the [ZenQuotes API](https://zenquotes.io/) and sends them as personalized daily or weekly emails to subscribed users.  
 
-The project was designed for **MindFuel**, a mental wellness startup, and demonstrates the ability to design, build, and orchestrate a modular backend pipeline in Python — integrating APIs, databases, email delivery, and logging systems.
+The project was designed for **MindFuel**, a mental wellness startup, and demonstrates the ability to design, build, and orchestrate a modular pipeline in Python — integrating APIs, databases, email delivery, and logging systems.
 
 ---
 
