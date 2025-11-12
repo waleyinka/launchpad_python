@@ -1,0 +1,16 @@
+# Environments and caches
+.env
+.venv/
+*.py[cod]
+*.pyo
+.pytest_cache/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# Byte-compiled files
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/

@@ -1,0 +1,39 @@
+bash: line 1: /path/to/python: No such file or directory
+Traceback (most recent call last):
+  File "/home/iamomowale/dec_launchpad/python_tasks/zenquotes_emailer/app/main.py", line 8, in <module>
+    from app import db, quote_fetcher, emailer
+ModuleNotFoundError: No module named 'app'
+Traceback (most recent call last):
+  File "/home/iamomowale/dec_launchpad/python_tasks/zenquotes_emailer/app/main.py", line 8, in <module>
+    from app import db, quote_fetcher, emailer
+ModuleNotFoundError: No module named 'app'
+2025-11-06 07:00:02 - INFO - 
+================================================================================
+2025-11-06 07:00:02 - INFO - === Mindfuel Daily Quotes Job Started ===
+2025-11-06 07:00:02 - INFO - Quote fetched: Being spiritual has nothing to do with what you believe and everything to do with your state of consciousness. - Eckhart Tolle
+2025-11-06 07:00:02 - INFO - 
+================================================================================
+=== DAILY QUOTES (2025-11-06) ===
+================================================================================
+2025-11-06 07:00:03 - INFO - Found 4 active users.
+2025-11-06 07:00:07 - INFO - Email sent successfully to user1@example.com
+2025-11-06 07:00:07 - INFO - Email log inserted for user_id=1 with status=sent
+2025-11-06 07:00:11 - ERROR - Failed to send email to godeyinka@gmail.com: (550, b'5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing')
+2025-11-06 07:00:11 - INFO - Email log inserted for user_id=8 with status=failed
+2025-11-06 07:00:14 - ERROR - Failed to send email to tunde.adeyemi@gmail.com: (550, b'5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing')
+2025-11-06 07:00:14 - INFO - Email log inserted for user_id=10 with status=failed
+2025-11-06 07:00:18 - INFO - Email sent successfully to fatima.yusuf@gmail.com
+2025-11-06 07:00:18 - INFO - Email log inserted for user_id=12 with status=sent
+2025-11-06 07:00:18 - INFO - === Mindfuel Daily Quotes Job Completed ===
+2025-11-06 07:00:18 - INFO - ================================================================================
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/usr/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/iamomowale/dec_launchpad/python_tasks/zenquotes_emailer/app/main.py", line 93, in <module>
+    summary = db.get_daily_summary()
+  File "/home/iamomowale/dec_launchpad/python_tasks/zenquotes_emailer/app/db.py", line 109, in get_daily_summary
+    cursor = conn.cursor()
+AttributeError: 'function' object has no attribute 'cursor'
